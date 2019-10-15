@@ -42,7 +42,7 @@ resnet34_with_softgates.pth.tar:   pretrained model for ResNet-34 with softgates
 
 
 
-** You can safely remove scales in the code and replace them with the averaging operation.**
+**You can safely remove scales in the code and replace them with the averaging operation.**
 
 
 resnet18_without_scales_softgates.pth.tar:   pretrained model for ResNet-18 without softgates and learnt scales, [google drive](https://drive.google.com/open?id=1Z9r9FK1yrAFyYgmZ45MUv7QXEEZUwG9Q)
