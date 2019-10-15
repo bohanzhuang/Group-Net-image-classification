@@ -32,6 +32,8 @@ new_layers.py:      define necessary quantization functions
 
 utils.py:	 define auxiliary functions
 
+resnet18_without_scales_softgates.pth.tar:   pretrained model for ResNet-18 without softgates and learnt scales, [google drive](https://drive.google.com/open?id=1Z9r9FK1yrAFyYgmZ45MUv7QXEEZUwG9Q)
+
 resnet18_without_softgates.pth.tar:	 pretrained model for ResNet-18 without softgates, [google drive](https://drive.google.com/open?id=1b6osR-T-9swwUEG7AXG1hIWB7GoYho5R)
 
 resnet18_with_softgates.pth.tar:    pretrained model for ResNet-18 with softgates, [google drive](https://drive.google.com/open?id=1YP94KWujdnCy5sUis-giHWeZ3n8o2pAD)
@@ -40,12 +42,6 @@ resnet34_without_softgates.pth.tar:  pretrained model for ResNet-34 without soft
 
 resnet34_with_softgates.pth.tar:   pretrained model for ResNet-34 with softgates, [google drive](https://drive.google.com/open?id=1ISnvB7PNz0jgDqlPFpyqcWuo32njh_fN)
 
-
-
-**You can safely remove scales in the code and replace them with the averaging operation.**
-
-
-resnet18_without_scales_softgates.pth.tar:   pretrained model for ResNet-18 without softgates and learnt scales, [google drive](https://drive.google.com/open?id=1Z9r9FK1yrAFyYgmZ45MUv7QXEEZUwG9Q)
 
 
 
