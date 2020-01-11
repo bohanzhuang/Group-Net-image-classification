@@ -22,28 +22,22 @@ pretrain.py:     pretrain using Tanh()
 
 finetune.py:     finetune the binary model 
 
-model.py:    define the model (with softgates)
+model.py:    define the model with softgates but without learnt scales. The pretrained model is resnet18_without_scales_with_softgates.pth.tar: [google drive](https://drive.google.com/open?id=1VChZcde5VfNnojRt6D6jejwCuESQ1fni)
 
-model_no_softgate.py:        define the model (without softgates)
+model_ablation_1.py:   define the model with softgates and learnt scales. The pretrained model is resnet18_with_scales_with_softgates.pth.tar: [google drive](https://drive.google.com/open?id=1YP94KWujdnCy5sUis-giHWeZ3n8o2pAD)
 
-model_no_scales_softgate.py:   define the model (without learnt scales and softgates)
+model_ablation_2.py:  define the model without softgates and learnt scales. The pretrained model is [google drive](https://drive.google.com/open?id=1Z9r9FK1yrAFyYgmZ45MUv7QXEEZUwG9Q)
+
+model_ablation_3.py:   define the model without softgates but with learnt scales. The pretrained model is [google drive](https://drive.google.com/open?id=1b6osR-T-9swwUEG7AXG1hIWB7GoYho5R)
 
 new_layers.py:      define necessary quantization functions
 
 utils.py:	 define auxiliary functions
 
-resnet18_without_scales_with_softgates.pth.tar:   pretrained model for ResNet-18 with softgates but without learnt scales, 
-[google drive](https://drive.google.com/open?id=1VChZcde5VfNnojRt6D6jejwCuESQ1fni)
 
-resnet18_without_scales_without_softgates.pth.tar:   pretrained model for ResNet-18 with learnt scales but without softgates, [google drive](https://drive.google.com/open?id=1Z9r9FK1yrAFyYgmZ45MUv7QXEEZUwG9Q)
+resnet34_without_softgates.pth.tar:  pretrained model for ResNet-34 without softgates but with learnt scales, [google drive](https://drive.google.com/open?id=122IsP7ysPQLK0akFloZq9297TLQQsKL8)
 
-resnet18_with_scales_without_softgates.pth.tar:	 pretrained model for ResNet-18 with learnt scales but without softgates, [google drive](https://drive.google.com/open?id=1b6osR-T-9swwUEG7AXG1hIWB7GoYho5R)
-
-resnet18_with_scales_with_softgates.pth.tar:    pretrained model for ResNet-18 with softgates and learnt scales, [google drive](https://drive.google.com/open?id=1YP94KWujdnCy5sUis-giHWeZ3n8o2pAD)
-
-resnet34_without_softgates.pth.tar:  pretrained model for ResNet-34 without softgates, [google drive](https://drive.google.com/open?id=122IsP7ysPQLK0akFloZq9297TLQQsKL8)
-
-resnet34_with_softgates.pth.tar:   pretrained model for ResNet-34 with softgates, [google drive](https://drive.google.com/open?id=1ISnvB7PNz0jgDqlPFpyqcWuo32njh_fN)
+resnet34_with_softgates.pth.tar:   pretrained model for ResNet-34 with softgates and learnt scales, [google drive](https://drive.google.com/open?id=1ISnvB7PNz0jgDqlPFpyqcWuo32njh_fN)
 
 
 
