@@ -26,9 +26,9 @@ model.py:    define the model with softgates but without learnt scales. The pret
 
 model_ablation_1.py:   define the model with softgates and learnt scales. The pretrained model is resnet18_with_scales_with_softgates.pth.tar: [MEGA](https://mega.nz/file/SJo3FJbS#xf3yh5BhobTPaXgWfJzSGQOK_gekOZiruPEnNZHNBrQ)
 
-model_ablation_2.py:  define the model without softgates and learnt scales. The pretrained model is [MEGA](https://mega.nz/file/XRxH1ZQS#XzPp17O5zJIw8i6SXTtgv1WWAw2MzLEbif8gbshKi7s)
+model_ablation_2.py:  define the model without softgates and learnt scales. The pretrained model is in [MEGA](https://mega.nz/file/XRxH1ZQS#XzPp17O5zJIw8i6SXTtgv1WWAw2MzLEbif8gbshKi7s)
 
-model_ablation_3.py:   define the model without softgates but with learnt scales. The pretrained model is [MEGA](https://mega.nz/file/jZpByB7Y#_uhLblXKBHb6-vkAKLZ1M_zVPFQzyOlI9VKr1yZbzbs)
+model_ablation_3.py:   define the model without softgates but with learnt scales. The pretrained model is in [MEGA](https://mega.nz/file/jZpByB7Y#_uhLblXKBHb6-vkAKLZ1M_zVPFQzyOlI9VKr1yZbzbs)
 
 new_layers.py:      define necessary quantization functions
 
