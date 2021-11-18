@@ -28,7 +28,7 @@ class BasicBlock(nn.Module):
         self.conv2 = nn.ModuleList([conv3x3(planes, planes, bitW) for i in range(num_bases)])
         self.bn2 = nn.ModuleList([nn.BatchNorm2d(planes) for i in range(num_bases)])
         self.downsample = downsample
-        self.num_bases = num_bases
+        self.scales = nn.ParameterList([nn.Parameter(torch.rand(1), requires_grad=True) for i in range(num_bases)])
 
     def quan_activations(self, x, bitA):
         if bitA == 32:
@@ -47,7 +47,7 @@ class BasicBlock(nn.Module):
             residual = x
             x = self.quan_activations(x, self.bitA)
 
-        for conv1, conv2, bn1, bn2 in zip(self.conv1, self.conv2, self.bn1, self.bn2):
+        for conv1, conv2, bn1, bn2, scale in zip(self.conv1, self.conv2, self.bn1, self.bn2, self.scales):
 
             out = conv1(x)
             out = self.relu(out)
@@ -61,11 +61,11 @@ class BasicBlock(nn.Module):
             out_new += out
                       
             if final_output is None:
-                final_output = out_new
+                final_output = scale * out_new
             else:
-                final_output += out_new
+                final_output += scale * out_new
 
-        return final_output / self.num_bases
+        return final_output
 
 
 
@@ -140,7 +140,7 @@ def resnet18(bitW, bitA, pretrained=False, **kwargs):
     """
     model = ResNet(BasicBlock, [2, 2, 2, 2], bitW, bitA, **kwargs)
     if pretrained:
-        load_dict = torch.load('./full_precision_records/weights/model_best.pth.tar')['state_dict']
+        load_dict = torch.load('./full_precision_weights/model_best.pth.tar')['state_dict']
         model_dict = model.state_dict()
         model_keys = model_dict.keys()
         for name, param in load_dict.items():
@@ -168,4 +168,3 @@ def resnet50(bitW, bitA, pretrained=False, **kwargs):
     """
     model = ResNet(Bottleneck, [3, 4, 6, 3], bitW, bitA, **kwargs)
     return model
-
